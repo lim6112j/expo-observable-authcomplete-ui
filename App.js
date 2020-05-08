@@ -44,9 +44,9 @@ const renderItems = (items) => items.map(item => {
   return (
     <>
       <Text>{item.login}</Text>
-      <Image source={{
+      <Image style={styles.tinyLogo} source={{
             uri: item.avatar_url,
-          }} 
+          }}
       />
     </>
     );
@@ -69,9 +69,13 @@ const renderItems = (items) => items.map(item => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    paddingTop: 60,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  tinyLogo: {
+    width: 50,
+    height: 50,
   },
 });
